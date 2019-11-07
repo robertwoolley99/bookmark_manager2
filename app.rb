@@ -8,6 +8,14 @@ class BookmarkManager < Sinatra::Base
     erb :'bookmarks/index'
   end
 
+  get '/bookmarks/new' do
+    erb :'bookmarks/new'
+  end
+
+  # post '/bookmarks/add' do
+  #   p 'http://www.tfl.gov.uk'
+  # end
+
 run! if app_file == $0
 
 end
