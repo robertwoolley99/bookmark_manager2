@@ -12,9 +12,13 @@ class BookmarkManager < Sinatra::Base
     erb :'bookmarks/new'
   end
 
-  # post '/bookmarks/add' do
-  #   p 'http://www.tfl.gov.uk'
-  # end
+  post '/bookmarks' do
+    url
+    Bookmark.create(url: params['new_bookmark'])
+    redirect('/bookmarks')
+  end
+
+
 
 run! if app_file == $0
 
