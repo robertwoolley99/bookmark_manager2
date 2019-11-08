@@ -1,10 +1,12 @@
 
 
-<ul>
+<form action='/bookmarks' method='post'>
   <% @bookmarks.each do |bookmark| %>
   <div>
     <input type="radio" id="<%=bookmark.id %>" name="record" value="<%=bookmark.title %>">
     <label for="<%=bookmark.id %>"> <%=bookmark.title %>  </label>
+    <%=bookmark.url %>
   </div>
   <% end %>
-</ul>
+  <input type='submit' value='OK'/>
+</form>
