@@ -1,5 +1,7 @@
 require 'sinatra/base'
-require './lib/bookmark'
+require './lib/bookmark
+require 'rubygems'
+require 'data_mapper'
 
 class BookmarkManager < Sinatra::Base
   get '/bookmarks' do
